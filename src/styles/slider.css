@@ -1,0 +1,21 @@
+.band {
+    align-items: flex-start;
+    background: var(--c-bg);
+    box-shadow: inset -1px 0 0 0 var(--c-accent);
+    color: var(--c-accent);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    justify-content: space-between;
+    opacity: 1;
+    padding-left: 3.4rem;
+    position: absolute;
+    width: 8rem;
+    will-change: width;
+    z-index: 20;
+    top: -10vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

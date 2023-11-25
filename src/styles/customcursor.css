@@ -1,0 +1,11 @@
+.custom-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #687d79; 
+    mix-blend-mode: difference; 
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
+  }
