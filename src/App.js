@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Loader from './components/loader';
 import CustomCursor from './components/CustomCursor';
-
+import './fonts.css';
 const App = () => {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
@@ -10,7 +10,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className=''>
       <CustomCursor />
       {!loadingComplete && <Loader onFinishLoading={handleFinishLoading} />}
       {/* Contenido de tu aplicación */}

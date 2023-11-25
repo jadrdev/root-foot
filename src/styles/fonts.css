@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Editorial';
+    src: url('./font/PPEditorialNew-Italic-BF644b214fb0c0a.otf') format('otf'), /* Reemplaza con la ruta correcta y el formato de tu fuente */
+         url('./font/PPEditorialNew-Regular-BF644b214ff145f.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
