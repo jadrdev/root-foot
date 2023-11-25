@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Loader from './components/loader';
 import CustomCursor from './components/CustomCursor';
-import './fonts.css';
+import './styles/fonts.css';
 const App = () => {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
