@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
 *,
 *::before,
 *::after {
@@ -20,12 +27,26 @@
 
 .bar-navigation {
   height: 90vh;
-  min-width: 100vw;
+  width: 90vw;
   background-color: var(--color-tan);
   display: grid;
   grid-template-rows: 100%;
   overflow: hidden;
-  width: fit-content;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list,
@@ -43,21 +64,24 @@
 }
 
 .nav-item {
-    --tx: calc(100% - var(--nav-item-offset));
-    display: grid;
-    grid-template-columns: 1fr 20% auto;
-    position: absolute;
-    height: 100%;
-    width: 70vw;
-    transition: transform var(--duration) var(--easing);
-    margin-left: calc(var(--i) * var(--nav-item-offset));
-    overflow: hidden;
-    transform: translateX(var(--tx));
-    z-index: calc(var(--total) + var(--i));
-    padding-right: 1vw;
-    animation: slide-down 1s cubic-bezier(0.5, 0, 0.3, 1);
-    animation-delay: calc(var(--i) * 0.15s);
-    animation-fill-mode: backwards;
+  --tx: calc(100% - var(--nav-item-offset));
+  display: grid;
+  grid-template-columns: 1fr 20% auto;
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  transition: transform var(--duration) var(--easing);
+  margin-left: calc(var(--i) * var(--nav-item-offset));
+  overflow: hidden;
+  transform: translateX(var(--tx));
+  z-index: calc(var(--total) + var(--i));
+  padding-right: 1vw;
+  -webkit-animation: slide-down 1s cubic-bezier(0.5, 0, 0.3, 1);
+          animation: slide-down 1s cubic-bezier(0.5, 0, 0.3, 1);
+  -webkit-animation-delay: calc(var(--i) * 0.15s);
+          animation-delay: calc(var(--i) * 0.15s);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .nav-item:hover:not(:focus):after {
   transform: none;
@@ -139,3 +163,22 @@
     pointer-events: none;
   }
 }
+
+
+  </style>
+</head>
+<body>
+    
+    
+    <nav class="bar-navigation">
+      <ul class="nav-list" style="--total: 4;">
+        <li class="nav-item" style="--i:3; --color: var(--color-green)" tabindex="1"> 
+            Hola    
+        </li>
+        <li class="nav-item" style="--i:2; --color: var(--color-gold)" tabindex="2"></li>
+        <li class="nav-item" style="--i:1; --color: var(--color-purple)" tabindex="3"></li>
+        <li class="nav-item" style="--i:0; --color: var(--color-red)" tabindex="4"></li>
+      </ul>
+    </nav>
+</body>
+</html>

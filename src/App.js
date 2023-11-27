@@ -3,7 +3,7 @@ import Loader from './components/loader';
 import CustomCursor from './components/CustomCursor';
 import './styles/fonts.css';
 import './styles/global.css';
-import Accordion from './components/Accordion';
+
 const App = () => {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
@@ -11,27 +11,23 @@ const App = () => {
     setLoadingComplete(true);
   };
 
-  const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4']; // Reemplaza con tus elementos
-
 
   return (
-    <div className=''>
+    <div>
       <CustomCursor />
       {!loadingComplete && <Loader onFinishLoading={handleFinishLoading} />}
       {/* Contenido de tu aplicación */}
       {loadingComplete && 
-      <main className='main'>
-          {/* <Carousel items={items} /> */}
-          <Accordion />
-          
-          <div className='bands'>
-            {items.map((item, index) => (
-              <div key={index} className='band'>
-                {/* Contenido de tu band */}
-              </div>
-            ))}
-          </div>
-        </main>}
+      <nav class="bar-navigation">
+      <ul class="nav-list" style={{ '--total': 4 }}>
+        <li class="nav-item" style={{ '--i': 3, '--color': 'var(--color-green)' }} tabindex="1">     
+        </li>
+        <li class="nav-item" style={{ '--i': 2, '--color': 'var(--color-gold)' }} tabindex="2"></li>
+        <li class="nav-item" style={{ '--i': 1, '--color': 'var(--color-purple)' }} tabindex="3"></li>
+        <li class="nav-item" style={{ '--i': 0, '--color': 'var(--color-red)' }} tabindex="4"></li>
+      </ul>
+    </nav>
+      }
 
     </div>
   );
